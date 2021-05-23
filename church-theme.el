@@ -73,26 +73,26 @@
    '(font-lock-comment-face ((t (:foreground "#616161" :slant italic)))) ;
 
    ;; Constant
-   '(font-lock-constant-face ((t (:foreground "#CAB4CC")))) ;Constantes: 
+   '(font-lock-constant-face ((t (:foreground "#CAB4CC")))) ;Constantes:
 
    ;;Doctring
-   ;;'(font-lock-doc-face ((t (:foreground "#F4B3A0")))) ;Docsting 
+   ;;'(font-lock-doc-face ((t (:foreground "#F4B3A0")))) ;Docsting
 
    ;; Function names
-   '(font-lock-function-name-face ((t (:foreground "#A4D1F2")))) ;Funcion names:  
+   '(font-lock-function-name-face ((t (:foreground "#A4D1F2")))) ;Funcion names:
 
    ;; Keywords
-   '(font-lock-keyword-face ((t (:foreground "#FFF8DC")))) ; keyword;  
+   '(font-lock-keyword-face ((t (:foreground "#FFF8DC")))) ; keyword;
 
    ;; Preprocessor
    ;;'(font-lock-preprocessor-face ((t (:foreground "dark slate blue"))))
    '(font-lock-preprocessor-face ((t (:inherit (font-lock-builtin-face)))))
 
    ;; Strings
-   '(font-lock-string-face ((t (:foreground "#F4B3A0")))) ;Cadenas; 
+   '(font-lock-string-face ((t (:foreground "#F4B3A0")))) ;Cadenas;
 
    ;; Variables
-   '(font-lock-variable-name-face ((t (:foreground "#BCEDDE")))) ;Color: 
+   '(font-lock-variable-name-face ((t (:foreground "#BCEDDE")))) ;Color:
    ;;'(font-lock-type-face ((t (:foreground "#fff2c0")))) ; Clases y types:
    '(font-lock-type-face ((t (:inherit (font-lock-keyword-face))))) ; Clases y types:
 
@@ -169,6 +169,10 @@
    '(diredfl-write-priv ((t (:foreground "#F0DFAF"))))
    ;;----------- display line numbers--------------
    '(line-number-current-line ((t (:inherit line-number :foreground "#Ffffff")))) ;;
+   ;; Flycheck
+   '(flycheck-error ((t (:underline (:color "#e2544e" :style wave) :slant italic))))
+   '(flycheck-error-list-error ((t (:weight semi-bold :foreground "#e37c60"))))
+   '(flycheck-fringe-error ((t (:inherit (flycheck-error-list-error)))))
    )
 
   )
