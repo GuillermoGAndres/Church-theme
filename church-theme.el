@@ -113,7 +113,7 @@
    ;;'(show-paren-match ((t (:foreground "#1ead05"))))
 
    ;;------------------------------ Highlight linum color------------------------------
-   ;;'(linum ((t (:inherit (shadow default) :background "#0B0B0B" :foreground "#F3EFDE"))))
+   '(linum ((t (:foreground "#fffffe"))))
 
    ;;------------------------------Company------------------------------
    '(company-preview ((t (:background "#373B41" :foreground "wheat"))))
@@ -136,8 +136,9 @@
    '(helm-ff-dotted-directory ((t (:extend t :foreground "#d6d6d6"))))
 
    ;;-------------------------Tabs------------------------------
-   '(tab-bar ((t (:inherit variable-pitch :background "#000000" :foreground "#FFDAB5"))))
-   '(tab-bar-tab-inactive ((t (:inherit tab-bar-tab :background "#000000" :foreground "#d6d6d6"))))
+   '(tab-bar ((t (:inherit fixed-pitch :background "#141414" :foreground "#ededed"))))
+   '(tab-bar-tab ((t (:box nil :inherit (tab-bar)))))
+   '(tab-bar-tab-inactive ((t (:background "#3a3636" :foreground "#ededed" :inherit (tab-bar-tab)))))
 
    ;; ---------------- Package Specific Stuff -----------
 
