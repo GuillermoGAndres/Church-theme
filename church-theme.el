@@ -40,7 +40,8 @@
       (church-region-yellow    "#FFFDD5")
       (church-region-letter    "#525252")
       (church-linum-yellow    "#F3EFDE")
-      (church-mode-line-black      "#0B0B0B")
+      (church-mode-line-inact      "#323232")
+      (church-mode-line-black      "#272727")
       (church-mode-line-white      "#cacaca")
       )
 
@@ -50,19 +51,24 @@
    ;; ----------------- Frame stuff --------------------
    `(default ((t (:background ,church-background :foreground ,church-foreground))))
    `(cursor  ((t (:background ,church-light-blue))))
+   ;; `(cursor  ((t (:background "#FFF8DC")))) amarillo
+   
    ;;Marcado de la linea actual si es que esta activado.
-   `(hl-line ((t (:background ,church-mid-gray))))
+   ;;`(hl-line ((t (:background ,church-mid-gray))))
+   `(hl-line ((t (:background "#3c3f42"))))
    ;;------------------------Mode-line------------------------------
-   `(mode-line-inactive ((t (:box nil :background ,church-mid-gray :foreground ,church-light-gray-blue))))
+   `(mode-line-inactive ((t (:box nil :background ,church-background :foreground ,church-foreground))))
    `(mode-line ((t (:box nil :foreground ,church-foreground :background ,church-mode-line-black))))
    '(mode-line-buffer-id ((t (:weight semibold))))
+
    ;;-------------------- Dir-ed search prompt --------------------
-   ;;`(minibuffer-prompt ((default (:foreground ,church-white))))
-   '(minibuffer-prompt ((t (:foreground "#8ce7cc"))))
+   ;; '(minibuffer-prompt ((t (:foreground "#8ce7cc")))) ;; verdeagua
+   '(minibuffer-prompt ((t (:foreground "#A4D1F2")))) ;; azul
+   
    ;; --------------------Highlight region color ------------------------------
    ;;`(region ((t (:foreground ,church-region-letter :background ,church-region-yellow))))
    ;;`(region ((t (:foreground "#EFFBFF" :background "#1b3552")))) ;; Region azul
-   `(region ((t (:foreground "#ffffff" :background "#525252")))) ;; Region gris
+   `(region ((t (:foreground "#ffffff" :background "#5e5e5e")))) ;; Region gris37
 
    ;; ---------------- Code Highlighting ----------------------------------------------
 
@@ -76,7 +82,8 @@
    '(font-lock-constant-face ((t (:foreground "#CAB4CC")))) ;Constantes:
 
    ;;Doctring
-   ;;'(font-lock-doc-face ((t (:foreground "#F4B3A0")))) ;Docsting
+   ;;'(font-lock-doc-face ((t (:foreground "#F4B3A0")))) ;Docsting naranja
+   '(font-lock-doc-face ((t (:foreground "#86B187")))) ;Docsting verde
 
    ;; Function names
    '(font-lock-function-name-face ((t (:foreground "#A4D1F2")))) ;Funcion names:
@@ -118,6 +125,8 @@
    '(company-scrollbar-fg ((t (:background "#373B41"))))
    '(company-tooltip-annotation ((t (:foreground "#F0DFAF"))))
 
+   '(company-template-field ((t (:foreground "white" :background "#525252"))))
+
    ;;------------------------------Helm------------------------------
    '(helm-source-header ((t (:extend t :foreground "#5bb499" :weight bold))))
    '(helm-match ((t (:extend t :foreground "#8ce7cc"))))
@@ -134,7 +143,6 @@
 
    ;;-------------------------Powerline------------------------------
    `(powerline-active1 ((t (:background ,church-off-white :foreground ,church-background))))
-   '(mode-line ((t (:background "#000000" :foreground "#EFFBFF" :box nil))))
 
    ;;--------------------Web mode --------------------
    '(web-mode-doctype-face ((t (:foreground "lightblue")))) ;turquoise , lightblue, PaleTurquoise
@@ -173,6 +181,23 @@
    '(flycheck-error ((t (:underline (:color "#e2544e" :style wave) :slant italic))))
    '(flycheck-error-list-error ((t (:weight semi-bold :foreground "#e37c60"))))
    '(flycheck-fringe-error ((t (:inherit (flycheck-error-list-error)))))
+   ;; highlight-indent
+   '(highlight-indentation-face ((t (:inherit hl-line))))
+   '(highlight-indentation-current-column-face ((t (:inherit region))))
+
+   ;; Esta dos propiedaes cambian varias propiedades de su herencia, con
+   ;; esto cambiaria con efecto cadena
+   
+   '(success ((t (:foreground "#86B187" :weight semi-bold))))
+   '(warning ((t (:foreground "#F4B3A0" :weight semi-bold))))
+
+   ;; Rainbow mode
+   '(rainbow-delimiters-depth-1-face ((t (:foreground "#ededed")))) ;; blanco
+   '(rainbow-delimiters-depth-2-face ((t (:foreground "#93a8c6")))) ;; azul
+   '(rainbow-delimiters-depth-3-face ((t (:foreground "#e4e9c8")))) ;; Amarillo
+   '(rainbow-delimiters-depth-4-face ((t (:foreground "#97b098")))) ;; verde
+   '(rainbow-delimiters-depth-5-face ((t (:foreground "#8f6561")))) ;; Cafe-rojo
+   
    )
 
   )
