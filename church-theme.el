@@ -58,7 +58,8 @@
    `(hl-line ((t (:background "#3c3f42"))))
    ;;------------------------Mode-line------------------------------
    `(mode-line-inactive ((t (:box nil :background ,church-background :foreground ,church-foreground))))
-   `(mode-line ((t (:box nil :foreground ,church-foreground :background ,church-mode-line-black))))
+   ;; `(mode-line ((t (:box nil :foreground ,church-foreground :background ,church-mode-line-black))))
+   `(mode-line ((t (:box nil :foreground "#010001" :background "#c0c0c0")))) ;; or #cdcdcd
    '(mode-line-buffer-id ((t (:weight semibold))))
 
    ;;-------------------- Dir-ed search prompt --------------------
