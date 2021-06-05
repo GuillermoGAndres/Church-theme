@@ -24,6 +24,7 @@
   "An cool dark color theme :D")
 
 (let ((church-background      "#141414")
+      (church-background2     "#1e1d1e")
       (church-foreground      "#ededed")
       (church-mid-gray        "#666666")
       (church-black           "#0B0B0B")
@@ -49,7 +50,7 @@
    'church
 
    ;; ----------------- Frame stuff --------------------
-   `(default ((t (:background ,church-background :foreground ,church-foreground))))
+   `(default ((t (:background ,church-background2 :foreground ,church-foreground))))
    `(cursor  ((t (:background ,church-light-blue))))
    ;; `(cursor  ((t (:background "#FFF8DC")))) amarillo
    
@@ -58,8 +59,8 @@
    `(hl-line ((t (:background "#3c3f42"))))
    ;;------------------------Mode-line------------------------------
    `(mode-line-inactive ((t (:box nil :background ,church-background :foreground ,church-foreground))))
-   ;; `(mode-line ((t (:box nil :foreground ,church-foreground :background ,church-mode-line-black))))
-   `(mode-line ((t (:box nil :foreground "#010001" :background "#c0c0c0")))) ;; or #cdcdcd
+   `(mode-line ((t (:box nil :foreground ,church-foreground :background ,church-mode-line-black))))
+   ;;`(mode-line ((t (:box nil :foreground "#010001" :background "#c0c0c0")))) ;; or #cdcdcd
    '(mode-line-buffer-id ((t (:weight semibold))))
 
    ;;-------------------- Dir-ed search prompt --------------------
@@ -157,7 +158,7 @@
    ;;----------------------JS2-mode------------------------------------
    '(js2-function-call ((t (:foreground "#FFF8DC")))) ; amarillo claro
    '(js2-object-property ((t (:foreground "#FFF8DC")))) ;amarillo claro
-   '(js2-external-variable ((t (:foreground "#F4B3A0")))) ; naranja
+   '(js2-external-variable ((t (:foreground "#9ecce1")))) ; azul
    ;;'(js2-error ((t (:foreground "#f05666")))) ;; rojo claro
    ;;'(js2-warning ((t (:underline "#EB9490")))) ;; rojo
    '(js2-error ((t (:foreground "#ed5f70" :slant italic :weight semi-bold))))
@@ -199,6 +200,11 @@
    '(rainbow-delimiters-depth-3-face ((t (:foreground "#e4e9c8")))) ;; Amarillo
    '(rainbow-delimiters-depth-4-face ((t (:foreground "#97b098")))) ;; verde
    '(rainbow-delimiters-depth-5-face ((t (:foreground "#8f6561")))) ;; Cafe-rojo
+
+   ;; Eshell mode
+   '(eshell-ls-symlink ((t (:foreground "#a0e1df"))))
+   '(eshell-ls-executable ((t (:foreground "#ceeca4"))))
+   '(eshell-ls-directory ((t (:foreground "#9dd0e8"))))
    
    )
 
