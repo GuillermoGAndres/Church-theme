@@ -70,7 +70,8 @@
    ;; --------------------Highlight region color ------------------------------
    ;;`(region ((t (:foreground ,church-region-letter :background ,church-region-yellow))))
    ;;`(region ((t (:foreground "#EFFBFF" :background "#1b3552")))) ;; Region azul
-   `(region ((t (:foreground "#ffffff" :background "#5e5e5e")))) ;; Region gris37
+   ;; `(region ((t (:foreground "#ffffff" :background "#5e5e5e")))) ;; Region gris37
+   `(region ((t (:background "#5e5e5e")))) ;; Region gris37
 
    ;; ---------------- Code Highlighting ----------------------------------------------
 
@@ -109,7 +110,7 @@
    '(font-lock-warning-face ((t (:foreground "pink"))))
 
    ;;fringe
-   `(fringe ((t (:background ,church-background))))
+   `(fringe ((t (:background ,church-background2))))
 
    ;; show-parent-match
    ;;'(show-paren-match ((t (:foreground "#1ead05"))))
@@ -138,8 +139,8 @@
    '(helm-ff-dotted-directory ((t (:extend t :foreground "#d6d6d6"))))
 
    ;;-------------------------Tabs------------------------------
-   '(tab-bar ((t (:inherit fixed-pitch :background "#141414" :foreground "#ededed"))))
-   '(tab-bar-tab ((t (:box nil :inherit (tab-bar)))))
+   '(tab-bar ((t (:inherit fixed-pitch :background "#1e1d1e" :foreground "#ededed"))))
+   '(tab-bar-tab ((t (:box nil :background "#1e1d1e" :inherit (tab-bar)))))
    '(tab-bar-tab-inactive ((t (:background "#3a3636" :foreground "#ededed" :inherit (tab-bar-tab)))))
 
    ;; ---------------- Package Specific Stuff -----------
