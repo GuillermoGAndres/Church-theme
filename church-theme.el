@@ -55,8 +55,10 @@
    ;; `(cursor  ((t (:background "#FFF8DC")))) amarillo
    
    ;;Marcado de la linea actual si es que esta activado.
-   ;;`(hl-line ((t (:background ,church-mid-gray))))
-   `(hl-line ((t (:background "#3c3f42"))))
+   ;; `(hl-line ((t (:background ,church-mid-gray))))
+   ;; `(hl-line ((t (:background "#3c3f42"))))
+   `(hl-line ((t (:background "#2b2b2b"))))
+   
    ;;------------------------Mode-line------------------------------
    `(mode-line-inactive ((t (:box nil :background ,church-background :foreground ,church-foreground))))
    `(mode-line ((t (:box nil :foreground ,church-foreground :background ,church-mode-line-black))))
@@ -71,7 +73,9 @@
    ;;`(region ((t (:foreground ,church-region-letter :background ,church-region-yellow))))
    ;;`(region ((t (:foreground "#EFFBFF" :background "#1b3552")))) ;; Region azul
    ;; `(region ((t (:foreground "#ffffff" :background "#5e5e5e")))) ;; Region gris37
-   `(region ((t (:background "#5e5e5e")))) ;; Region gris37
+   ;; `(region ((t (:background "#5e5e5e")))) ;; Region gris37
+   '(region ((t (:background "#3c3f42")))) ;; cool
+   
 
    ;; ---------------- Code Highlighting ----------------------------------------------
 
@@ -79,7 +83,8 @@
    '(font-lock-builtin-face ((t (:foreground "#A4D1F2")))) ;
 
    ;; Comments
-   '(font-lock-comment-face ((t (:foreground "#616161" :slant italic)))) ;
+   ;; '(font-lock-comment-face ((t (:foreground "#616161" :slant italic)))) ;
+   '(font-lock-comment-face ((t (:foreground "#8b8988" :slant italic)))) ;; more stronger
 
    ;; Constant
    '(font-lock-constant-face ((t (:foreground "#CAB4CC")))) ;Constantes:
@@ -180,7 +185,11 @@
    '(diredfl-symlink ((t (:foreground "#96e7e5"))))
    '(diredfl-write-priv ((t (:foreground "#F0DFAF"))))
    ;;----------- display line numbers--------------
-   '(line-number-current-line ((t (:inherit line-number :foreground "#Ffffff")))) ;;
+   '(line-number ((t (:inherit (shadow default) :foreground "#656666")))) ;; letras grises
+   ;; '(line-number-current-line ((t (:inherit line-number :foreground "#Ffffff"))))
+   '(line-number-current-line ((t (:inherit line-number :foreground "#Ffffff"
+                                            :background "#2b2b2b"))))
+   
    ;; Flycheck
    '(flycheck-error ((t (:underline (:color "#e2544e" :style wave) :slant italic))))
    '(flycheck-error-list-error ((t (:weight semi-bold :foreground "#e37c60"))))
